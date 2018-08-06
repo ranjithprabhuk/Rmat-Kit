@@ -24,6 +24,8 @@
   "author": "Ranjithprabhu K",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^1.4.3",
+    "@material-ui/icons": "^2.0.1",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
     "react": "^16.4.2",
