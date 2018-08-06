@@ -21,5 +21,16 @@
     "Components"
   ],
   "author": "Ranjithprabhu K",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.4.7",
+    "@types/react-dom": "^16.0.6",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.0",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^3.0.1"
+  }
 }
