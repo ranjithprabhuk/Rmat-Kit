@@ -4,6 +4,7 @@
   "description": "React Material UI Component Kit",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "test"
   },
   "repository": {
@@ -32,6 +33,7 @@
     "awesome-typescript-loader": "^5.2.0",
     "source-map-loader": "^0.2.3",
     "typescript": "^3.0.1",
-    "webpack": "^4.16.5"
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   }
 }
