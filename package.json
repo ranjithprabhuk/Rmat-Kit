@@ -1,11 +1,12 @@
 {
   "name": "rmat-kit",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "React Material UI Component Kit",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "test": "test"
+    "test": "test",
+    "compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,14 +25,19 @@
   "author": "Ranjithprabhu K",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^1.4.3",
+    "@material-ui/icons": "^2.0.1",
     "@types/react": "^16.4.7",
     "@types/react-dom": "^16.0.6",
+    "classnames": "^2.2.6",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.6",
     "awesome-typescript-loader": "^5.2.0",
     "source-map-loader": "^0.2.3",
+    "tslint": "^5.11.0",
     "typescript": "^3.0.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
