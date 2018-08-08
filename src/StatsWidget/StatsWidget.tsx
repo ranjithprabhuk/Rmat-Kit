@@ -10,9 +10,9 @@ import {
   withStyles,
 } from '@material-ui/core';
 import { Style } from '@material-ui/core/styles/createTypography';
-import { statsWidgetStyles } from './statsWidget.styles';
+import { ClassKey, statsWidgetStyles } from './statsWidget.styles';
 
-export interface IStatsWidgetProps extends WithStyles<typeof statsWidgetStyles> {
+export interface IStatsWidgetProps {
   component?: any;
   color?: PropTypes.Color | 'textSecondary' | 'error';
   title?: string;
@@ -30,7 +30,7 @@ export interface IStatsWidgetProps extends WithStyles<typeof statsWidgetStyles> 
   theme?: Theme;
 }
 
-const StatsWidget: React.SFC<IStatsWidgetProps> = ({
+const StatsWidget = ({
   classes,
   component,
   color,
@@ -47,7 +47,7 @@ const StatsWidget: React.SFC<IStatsWidgetProps> = ({
   onValueClick,
   onWidgetClick,
   onTitleClick,
-}) => {
+}: IStatsWidgetProps & WithStyles<ClassKey>) => {
   const isRightAligned = direction === 'rtl' || (theme && theme.direction === 'rtl');
 
   return (
