@@ -1,11 +1,18 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import { Paper, Grid, Typography, PropTypes, Theme } from '@material-ui/core';
-import { statsWidgetStyles } from './statsWidget.styles';
+import {
+  Paper,
+  Grid,
+  Typography,
+  PropTypes,
+  Theme,
+  WithStyles,
+  withStyles,
+} from '@material-ui/core';
 import { Style } from '@material-ui/core/styles/createTypography';
+import { statsWidgetStyles } from './statsWidget.styles';
 
-interface IStatsWidgetOwnProps {
+export interface IStatsWidgetProps extends WithStyles<typeof statsWidgetStyles> {
   component?: any;
   color?: PropTypes.Color | 'textSecondary' | 'error';
   title?: string;
@@ -20,14 +27,8 @@ interface IStatsWidgetOwnProps {
   onTitleClick?: () => void;
   onWidgetClick?: () => void;
   onValueClick?: () => void;
-}
-
-interface IStatsWidgetStateProps {
-  classes: any;
   theme?: Theme;
 }
-
-export type IStatsWidgetProps = IStatsWidgetOwnProps & IStatsWidgetStateProps;
 
 const StatsWidget: React.SFC<IStatsWidgetProps> = ({
   classes,
@@ -93,4 +94,4 @@ const StatsWidget: React.SFC<IStatsWidgetProps> = ({
   );
 };
 
-export default withStyles(statsWidgetStyles, { withTheme: true })(StatsWidget);
+export default withStyles(statsWidgetStyles)<IStatsWidgetProps>(StatsWidget);
