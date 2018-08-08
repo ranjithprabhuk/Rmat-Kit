@@ -3,7 +3,6 @@ import * as classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import { Paper, Grid, Typography, PropTypes, Theme } from '@material-ui/core';
 import { statsWidgetStyles } from './statsWidget.styles';
-import { IStatsWidgetProps } from './IStatsWidget';
 import { Style } from '@material-ui/core/styles/createTypography';
 
 interface IStatsWidgetOwnProps {
@@ -24,7 +23,7 @@ interface IStatsWidgetOwnProps {
 }
 
 interface IStatsWidgetStateProps {
-  classes?: any;
+  classes: any;
   theme?: Theme;
 }
 
