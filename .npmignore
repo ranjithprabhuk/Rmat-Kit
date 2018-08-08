@@ -11,4 +11,6 @@ logs
 webpack.config.js
 tsconfig.json
 tslint.json
+.gitattributes
 *.log
+*.tsx
