@@ -5,5 +5,6 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var StatsWidget_1 = require("./StatsWidget");
 exports.default = StatsWidget_1.default;
+exports.StatsWidget = StatsWidget_1.default;
 __export(require("./StatsWidget"));
 //# sourceMappingURL=index.js.map

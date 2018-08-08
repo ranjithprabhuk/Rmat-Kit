@@ -12,3 +12,4 @@ webpack.config.js
 tsconfig.json
 tslint.json
 *.log
+*.tsx
