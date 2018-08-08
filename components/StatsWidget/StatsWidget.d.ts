@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { PropTypes, Theme, WithStyles } from '@material-ui/core';
+import { PropTypes, Theme } from '@material-ui/core';
 import { Style } from '@material-ui/core/styles/createTypography';
-import { statsWidgetStyles } from './statsWidget.styles';
-export interface IStatsWidgetProps extends WithStyles<typeof statsWidgetStyles> {
+import { ClassKey } from './statsWidget.styles';
+export interface IStatsWidgetProps {
     component?: any;
     color?: PropTypes.Color | 'textSecondary' | 'error';
     title?: string;
@@ -19,5 +19,5 @@ export interface IStatsWidgetProps extends WithStyles<typeof statsWidgetStyles> 
     onValueClick?: () => void;
     theme?: Theme;
 }
-declare const _default: React.ComponentType<import("@material-ui/core").Overwrite<IStatsWidgetProps, import("@material-ui/core/styles/withStyles").StyledComponentProps<never>>>;
+declare const _default: React.ComponentType<import("@material-ui/core").Overwrite<IStatsWidgetProps, import("@material-ui/core/styles/withStyles").StyledComponentProps<ClassKey>>>;
 export default _default;
