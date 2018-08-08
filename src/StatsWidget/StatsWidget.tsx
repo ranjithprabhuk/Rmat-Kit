@@ -1,9 +1,33 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import { Paper, Grid, Typography } from '@material-ui/core';
+import { Paper, Grid, Typography, PropTypes, Theme } from '@material-ui/core';
 import { statsWidgetStyles } from './statsWidget.styles';
-import { IStatsWidgetProps } from './IStatsWidget';
+import { Style } from '@material-ui/core/styles/createTypography';
+
+interface IStatsWidgetOwnProps {
+  component?: any;
+  color?: PropTypes.Color | 'textSecondary' | 'error';
+  title?: string;
+  value?: string;
+  square?: boolean;
+  textColor?: string;
+  backgroundColor?: string;
+  direction?: 'rtl' | 'ltr';
+  padding?: number | string;
+  valueVariant?: Style | 'caption' | 'button';
+  titleVariant?: Style | 'caption' | 'button';
+  onTitleClick?: () => void;
+  onWidgetClick?: () => void;
+  onValueClick?: () => void;
+}
+
+interface IStatsWidgetStateProps {
+  classes: any;
+  theme?: Theme;
+}
+
+export type IStatsWidgetProps = IStatsWidgetOwnProps & IStatsWidgetStateProps;
 
 const StatsWidget: React.SFC<IStatsWidgetProps> = ({
   classes,

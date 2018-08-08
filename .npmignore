@@ -1,0 +1,14 @@
+.vscode/
+.idea/
+.ideabuild/
+node_modules/
+build/
+typings/
+tmp/
+dist/
+src/
+logs
+webpack.config.js
+tsconfig.json
+tslint.json
+*.log
