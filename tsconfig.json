@@ -12,6 +12,7 @@
       "outDir": "components",
       "noUnusedLocals": true,
       "lib": ["es2015", "dom"],
+      "declarations": true,
     },
     "include": [
         "src/**/*"
