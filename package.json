@@ -1,6 +1,6 @@
 {
   "name": "rmat-kit",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "React Material UI Component Kit",
   "main": "index.js",
   "scripts": {
