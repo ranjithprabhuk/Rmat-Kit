@@ -2,8 +2,9 @@
 .idea/
 .ideabuild/
 node_modules/
+build/
 typings/
 tmp/
-dist/
 logs
 *.log
+components/examples
