@@ -1,3 +1,10 @@
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
+const htmlWebpackPlugin = new HtmlWebPackPlugin({
+  template: "./index.html",
+  filename: "./index.html"
+});
+
 module.exports = {
     entry: "./examples/index.tsx",
     output: {
@@ -30,5 +37,6 @@ module.exports = {
     externals: {
         "react": "React",
         "react-dom": "ReactDOM"
-    }
+    },
+    plugins: [htmlWebpackPlugin]
 };
