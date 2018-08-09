@@ -5,6 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Widgets from '@material-ui/icons/Widgets';
+import StatsWidgets from './StatsWidgets';
 
 const styles = (theme: Theme) => ({
   root: {
@@ -44,7 +45,7 @@ class RMatKitExampleApp extends React.Component<any, any> {
               <Tab label='Widgets' icon={<Widgets />} />
             </Tabs>
           </AppBar>
-          {value === 0 && 'Some Content to be displayed'}
+          {value === 0 && <StatsWidgets /> }
         </div>
       </MuiThemeProvider>
     );
