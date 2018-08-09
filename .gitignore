@@ -7,3 +7,4 @@ typings/
 tmp/
 logs
 *.log
+components/examples
