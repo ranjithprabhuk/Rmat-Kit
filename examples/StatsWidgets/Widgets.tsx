@@ -103,6 +103,52 @@ class Widgets extends React.Component<IWidgetsProps, IWidgetsState> {
             />
           </Grid>
         </Grid>
+        <Grid container spacing={8} className={classes.gridContainer}>
+          <Grid item xs={12}>
+            <Typography variant='body2'>Widgets With Square Border</Typography>
+            <Divider />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <StatsWidget
+              square
+              component={<StarIcon style={{ fontSize: 50 }} />}
+              value='32.5 C'
+              title='Temperature'
+              textColor={defineColours(ThemeConfig.primaryColor, true)}
+              backgroundColor={defineColours(ThemeConfig.primaryColor)}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <StatsWidget
+              square
+              component={<InboxIcon style={{ fontSize: 50 }} />}
+              value='13486'
+              title='Visibility'
+              color='secondary'
+              backgroundColor={defineColours(ThemeConfig.secondaryColor)}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <StatsWidget
+              square
+              component={<StarIcon style={{ fontSize: 50 }} />}
+              value='87%'
+              title='Humidity'
+              textColor={defineColours(ThemeConfig.warningColor, true)}
+              backgroundColor={defineColours(ThemeConfig.warningColor)}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <StatsWidget
+              square
+              component={<StarIcon style={{ fontSize: 50 }} />}
+              value='2.1 m/s'
+              title='Wind Speed'
+              textColor={defineColours(ThemeConfig.dangerColor, true)}
+              backgroundColor={defineColours(ThemeConfig.dangerColor)}
+            />
+          </Grid>
+        </Grid>
       </div>
     );
   }
