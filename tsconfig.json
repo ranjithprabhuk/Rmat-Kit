@@ -21,6 +21,6 @@
       "build",
       "config",
       "node_modules",
-      "dev_server.js"
+      "examples"
     ]
   }
