@@ -1,18 +1,14 @@
 import * as React from 'react';
 import * as classNames from 'classnames';
-import {
-  Paper,
-  Grid,
-  Typography,
-  PropTypes,
-  Theme,
-  WithStyles,
-  withStyles,
-} from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import withStyles from '@material-ui/core/styles/withStyles';
+import { PropTypes, WithStyles, StandardProps} from '@material-ui/core';
 import { Style } from '@material-ui/core/styles/createTypography';
-import { ClassKey, statsWidgetStyles } from './statsWidget.styles';
+import { statsWidgetStyles, StatsWidgetClassKey } from './statsWidget.styles';
 
-export interface IStatsWidgetProps {
+export interface IStatsWidgetProps extends StandardProps<React.HTMLAttributes<HTMLDivElement>, StatsWidgetClassKey> {
   component?: any;
   color?: PropTypes.Color | 'textSecondary' | 'error';
   title?: string;
@@ -27,10 +23,10 @@ export interface IStatsWidgetProps {
   onTitleClick?: () => void;
   onWidgetClick?: () => void;
   onValueClick?: () => void;
-  theme?: Theme;
+  classes?: any;
 }
 
-const StatsWidget = ({
+const StatsWidget: React.SFC<IStatsWidgetProps & WithStyles<StatsWidgetClassKey>> = ({
   classes,
   component,
   color,
@@ -47,7 +43,7 @@ const StatsWidget = ({
   onValueClick,
   onWidgetClick,
   onTitleClick,
-}: IStatsWidgetProps & WithStyles<ClassKey>) => {
+}) => {
   const isRightAligned = direction === 'rtl' || (theme && theme.direction === 'rtl');
 
   return (
@@ -94,4 +90,4 @@ const StatsWidget = ({
   );
 };
 
-export default withStyles(statsWidgetStyles)<IStatsWidgetProps>(StatsWidget);
+export default withStyles(statsWidgetStyles)(StatsWidget);
