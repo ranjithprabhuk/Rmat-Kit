@@ -2,7 +2,6 @@
 .idea/
 .ideabuild/
 node_modules/
-build/
 typings/
 tmp/
 dist/
