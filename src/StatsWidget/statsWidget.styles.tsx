@@ -1,6 +1,8 @@
-import { Theme } from '@material-ui/core';
+import { Theme, StyleRulesCallback } from '@material-ui/core';
 
-export const statsWidgetStyles = (theme: Theme): any => ({
+export type ClassKey = 'icon' | 'statContent' | 'statValue' | 'statTitle' | 'clickable';
+
+export const statsWidgetStyles: StyleRulesCallback<ClassKey> = (theme: Theme) => ({
   icon: {
     background: theme.palette.primary.dark,
     width: '100%',

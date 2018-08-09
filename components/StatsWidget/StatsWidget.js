@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var classNames = require("classnames");
-var styles_1 = require("@material-ui/core/styles");
 var core_1 = require("@material-ui/core");
 var statsWidget_styles_1 = require("./statsWidget.styles");
 var StatsWidget = function (_a) {
@@ -18,5 +17,5 @@ var StatsWidget = function (_a) {
                 React.createElement(core_1.Grid, { item: true, xs: 5 },
                     React.createElement(core_1.Paper, { className: classNames(classes.icon, onWidgetClick && classes.clickable), style: { background: backgroundColor }, square: square, onClick: function () { return onWidgetClick && onWidgetClick(); } }, component))))));
 };
-exports.default = styles_1.withStyles(statsWidget_styles_1.statsWidgetStyles, { withTheme: true })(StatsWidget);
+exports.default = core_1.withStyles(statsWidget_styles_1.statsWidgetStyles)(StatsWidget);
 //# sourceMappingURL=StatsWidget.js.map
