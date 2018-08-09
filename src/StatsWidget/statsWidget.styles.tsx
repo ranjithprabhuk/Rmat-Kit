@@ -1,8 +1,9 @@
-import { Theme, StyleRulesCallback } from '@material-ui/core';
+import { Theme } from '@material-ui/core/styles/createMuiTheme';
+import { StyleRulesCallback } from '@material-ui/core/styles/withStyles';
 
-export type ClassKey = 'icon' | 'statContent' | 'statValue' | 'statTitle' | 'clickable';
+export type StatsWidgetClassKey = 'icon' | 'statContent' | 'statValue' | 'statTitle' | 'clickable';
 
-export const statsWidgetStyles: StyleRulesCallback<ClassKey> = (theme: Theme) => ({
+export const statsWidgetStyles: StyleRulesCallback<StatsWidgetClassKey> = (theme: Theme) => ({
   icon: {
     background: theme.palette.primary.dark,
     width: '100%',
