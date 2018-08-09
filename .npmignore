@@ -13,4 +13,4 @@ tsconfig.json
 tslint.json
 .gitattributes
 *.log
-*.tsx
+index.tsx
