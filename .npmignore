@@ -14,4 +14,7 @@ tslint.json
 .gitattributes
 *.log
 index.tsx
-exclude all the components/examples
+components/examples
+tests/
+coverage/
+test.setup.tsx
