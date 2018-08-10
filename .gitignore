@@ -8,3 +8,5 @@ tmp/
 logs
 *.log
 components/examples
+coverage/
+tests/__snapshots__/
