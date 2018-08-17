@@ -7,4 +7,9 @@ describe('StatsWidget', () => {
     const wrapper = render(<StatsWidget value='123' />);
     expect(wrapper.find('h1').text()).toEqual('123');
   });
+
+  it('renders stats widget title', () => {
+    const wrapper = render(<StatsWidget title='some title' />);
+    expect(wrapper.find('h3').text()).toEqual('some title');
+  });
 });
